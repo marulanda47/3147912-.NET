@@ -1,0 +1,118 @@
+﻿@model Reportes.Models.ViewModels.VentasMensualesViewModel
+
+@{
+    ViewData["Title"] = "Ventas mensuales";
+    var dtf = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat;
+    var mesNombre = dtf.GetMonthName(Model.Mes);
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 class="fw-bold mb-1">Ventas mensuales</h2>
+        <p class="text-muted mb-0">
+            Resumen de ventas en @mesNombre @Model.Anio.
+        </p>
+    </div>
+
+    <form method="get" class="row g-2">
+        <div class="col-auto">
+            <select name="mes" class="form-select">
+                @for (int m = 1; m <= 12; m++)
+                {
+                    var nombreMes = dtf.GetMonthName(m);
+                    bool esActual = m == Model.Mes;
+
+                    <option value="@m" selected="@(esActual ? "selected" : null)">
+                        @nombreMes
+                    </option>
+                }
+            </select>
+        </div>
+
+        <div class="col-auto">
+            <input type="number"
+                   name="anio"
+                   class="form-control"
+                   value="@Model.Anio" />
+        </div>
+
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary">
+                Filtrar
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- KPIs -->
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <span class="text-muted small">Ventas del mes</span>
+                <h3 class="fw-bold mt-1">@Model.TotalMes.ToString("C")</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <span class="text-muted small">Cantidad de pedidos</span>
+                <h3 class="fw-bold mt-1">@Model.CantidadPedidos</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <span class="text-muted small">Ticket promedio</span>
+                <h3 class="fw-bold mt-1">@Model.TicketPromedio.ToString("C")</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="mb-0">Ventas por día del mes</h5>
+            <small class="text-muted">
+                Cada barra representa el total vendido por día.
+            </small>
+        </div>
+        <canvas id="chartDiasMes" style="min-height:280px;"></canvas>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const labelsDias = @Html.Raw(Model.LabelsDiasJson ?? "[]");
+        const datosDias  = @Html.Raw(Model.DatosDiasJson ?? "[]");
+
+        const ctxDias = document.getElementById("chartDiasMes").getContext("2d");
+
+        new Chart(ctxDias, {
+            type: "bar",
+            data: {
+                labels: labelsDias,
+                datasets: [{
+                    label: "Ventas ($)",
+                    data: datosDias,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    </script>
+}

@@ -1,0 +1,134 @@
+﻿@{
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString() ?? "";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ChocoAdmin</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Reportes.styles.css" asp-append-version="true" />
+</head>
+<body class="ra-body">
+
+    <div class="ra-layout d-flex">
+        <!-- SIDEBAR -->
+        <aside class="ra-sidebar d-flex flex-column">
+            <div class="ra-sidebar-header">
+                <div class="ra-logo-circle">
+                    🍓
+                </div>
+                <div>
+                    <div class="ra-logo-title">ChocoFreseo</div>
+                    <div class="ra-logo-subtitle">Panel de reportes</div>
+                </div>
+            </div>
+
+            <nav class="ra-sidebar-menu flex-grow-1 mt-3">
+                <ul class="list-unstyled">
+
+                    <li>
+                        <a asp-controller="Reportes"
+                           asp-action="Index"
+                           class="ra-nav-link @(currentController == "Reportes" && currentAction == "Index" ? "active" : "")">
+                            <span class="ra-nav-icon">📊</span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <!-- Links para futuros reportes específicos (placeholder, puedes crear las acciones luego) -->
+                    <li class="ra-nav-section-title mt-3">Reportes</li>
+
+                    <li>
+                        <a asp-controller="Reportes"
+                           asp-action="VentasDiarias"
+                           class="ra-nav-link @(currentAction == "VentasDiarias" ? "active" : "")">
+                            <span class="ra-nav-icon">📅</span>
+                            <span>Ventas diarias</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a asp-controller="Reportes"
+                           asp-action="VentasMensuales"
+                           class="ra-nav-link @(currentAction == "VentasMensuales" ? "active" : "")">
+                            <span class="ra-nav-icon">📆</span>
+                            <span>Ventas mensuales</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a asp-controller="Reportes"
+                           asp-action="TopProductos"
+                           class="ra-nav-link @(currentAction == "TopProductos" ? "active" : "")">
+                            <span class="ra-nav-icon">🍰</span>
+                            <span>Top productos</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a asp-controller="Reportes"
+                           asp-action="TopClientes"
+                           class="ra-nav-link @(currentAction == "TopClientes" ? "active" : "")">
+                            <span class="ra-nav-icon">👤</span>
+                            <span>Top clientes</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <div class="ra-sidebar-footer">
+                <div class="small text-muted">
+                    v1.0 • .NET 10
+                </div>
+            </div>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="ra-main flex-grow-1 d-flex flex-column">
+            <!-- TOPBAR -->
+@*             <header class="ra-topbar d-flex align-items-center justify-content-between">
+                <div class="d-flex flex-column">
+                    <span class="ra-topbar-title">ChocoFreseo Admin</span>
+                    <span class="ra-topbar-subtitle">Análisis y métricas en tiempo real</span>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <div class="ra-badge-env">Entorno: Desarrollo</div>
+                    <div class="ra-user-chip">
+                        <div class="ra-user-avatar">AD</div>
+                        <div class="ra-user-info">
+                            <div class="ra-user-name">Admin Demo</div>
+                            <div class="ra-user-role">Analista</div>
+                        </div>
+                    </div>
+                </div>
+            </header> *@
+
+            <!-- CONTENIDO -->
+            <main class="ra-content flex-grow-1">
+                <div class="container-fluid px-3 px-md-4 py-3">
+                    @RenderBody()
+                </div>
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="ra-footer text-center py-2">
+                <small class="text-muted">
+                    &copy; @DateTime.Now.Year - ChocoAdmin • Módulo de reportes
+                </small>
+            </footer>
+        </div>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

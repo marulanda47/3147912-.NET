@@ -1,0 +1,128 @@
+﻿@model Reportes.Models.ViewModels.TopClientesViewModel
+
+@{
+    ViewData["Title"] = "Top clientes";
+    var dtf = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat;
+    var mesNombre = dtf.GetMonthName(Model.Mes);
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 class="fw-bold mb-1">Top clientes</h2>
+        <p class="text-muted mb-0">
+            Clientes que más compraron en @mesNombre @Model.Anio.
+        </p>
+    </div>
+
+    <form method="get" class="row g-2">
+        <div class="col-auto">
+            <select name="mes" class="form-select">
+                @for (int m = 1; m <= 12; m++)
+                {
+                    var nombreMes = dtf.GetMonthName(m);
+                    bool esActual = m == Model.Mes;
+
+                    <option value="@m" selected="@(esActual ? "selected" : null)">
+                        @nombreMes
+                    </option>
+                }
+            </select>
+        </div>
+        <div class="col-auto">
+            <input type="number"
+                   name="anio"
+                   class="form-control"
+                   value="@Model.Anio" />
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary">
+                Filtrar
+            </button>
+        </div>
+    </form>
+</div>
+
+<div class="row g-3">
+    <!-- Tabla -->
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="mb-3">Top 10 clientes</h5>
+
+                @if (Model.Clientes != null && Model.Clientes.Count > 0)
+                {
+                    <div class="table-responsive">
+                        <table class="table table-sm align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Cliente</th>
+                                    <th class="text-end">Pedidos</th>
+                                    <th class="text-end">Total gastado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var c in Model.Clientes)
+                                {
+                                    <tr>
+                                        <td>@c.Nombre</td>
+                                        <td class="text-end">@c.CantidadPedidos</td>
+                                        <td class="text-end">@c.TotalGastado.ToString("C")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+                else
+                {
+                    <p class="text-muted mb-0">No hay datos para el período seleccionado.</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Gráfico -->
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="mb-3">Gráfico por monto gastado</h5>
+                <p class="text-muted small mb-2">
+                    Comparación del total gastado por los clientes top.
+                </p>
+                <canvas id="chartTopClientes" style="min-height:280px;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const labelsCli = @Html.Raw(Model.LabelsJson ?? "[]");
+        const datosCli  = @Html.Raw(Model.DatosJson ?? "[]");
+
+        const ctxCli = document.getElementById("chartTopClientes").getContext("2d");
+
+        new Chart(ctxCli, {
+            type: "bar",
+            data: {
+                labels: labelsCli,
+                datasets: [{
+                    label: "Total gastado ($)",
+                    data: datosCli,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: "y",
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: { beginAtZero: true }
+                }
+            }
+        });
+    </script>
+}

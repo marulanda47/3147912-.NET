@@ -1,0 +1,144 @@
+﻿@model Reportes.Models.ViewModels.VentasDiariasViewModel
+
+@{
+    ViewData["Title"] = "Ventas diarias";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 class="fw-bold mb-1">Ventas diarias</h2>
+        <p class="text-muted mb-0">
+            Resumen de ventas del día @Model.Fecha.ToString("dd/MM/yyyy").
+        </p>
+    </div>
+
+    <form method="get" class="d-flex gap-2">
+        <input type="date"
+               name="fecha"
+               class="form-control"
+               value="@Model.Fecha.ToString("yyyy-MM-dd")" />
+        <button class="btn btn-primary">Filtrar</button>
+    </form>
+</div>
+
+<!-- KPIs -->
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <span class="text-muted small">Ventas del día</span>
+                <h3 class="fw-bold mt-1">@Model.TotalDia.ToString("C")</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <span class="text-muted small">Cantidad de pedidos</span>
+                <h3 class="fw-bold mt-1">@Model.CantidadPedidos</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <span class="text-muted small">Ticket promedio</span>
+                <h3 class="fw-bold mt-1">@Model.TicketPromedio.ToString("C")</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <!-- Tabla de pedidos -->
+    <div class="col-lg-7">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="mb-0">Pedidos del día</h5>
+                    <span class="text-muted small">
+                        Total: @Model.CantidadPedidos pedidos
+                    </span>
+                </div>
+
+                @if (Model.Pedidos != null && Model.Pedidos.Any())
+                {
+                    <div class="table-responsive">
+                        <table class="table table-sm align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Cliente</th>
+                                    <th>Hora</th>
+                                    <th class="text-end">Total</th>
+                                    <th>Método de pago</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var p in Model.Pedidos)
+                                {
+                                    <tr>
+                                        <td>@p.Id</td>
+                                        <td>@p.ClienteNombre</td>
+                                        <td>@p.FechaPedido.ToString("HH:mm")</td>
+                                        <td class="text-end">@p.Total.ToString("C")</td>
+                                        <td>@(string.IsNullOrWhiteSpace(p.MetodoPago) ? "Sin registrar" : p.MetodoPago)</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+                else
+                {
+                    <p class="text-muted mb-0">No hay pedidos registrados para este día.</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Gráfico métodos de pago -->
+    <div class="col-lg-5">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="mb-3">Ventas por método de pago</h5>
+
+                <div class="mb-2">
+                    <small class="text-muted">
+                        Distribución del total del día por método de pago.
+                    </small>
+                </div>
+
+                <canvas id="chartMetodosPago" style="min-height:260px;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const labelsMetodos = @Html.Raw(Model.LabelsMetodosPagoJson ?? "[]");
+        const datosMetodos  = @Html.Raw(Model.DatosMetodosPagoJson ?? "[]");
+
+        const ctxMetodos = document.getElementById("chartMetodosPago").getContext("2d");
+
+        new Chart(ctxMetodos, {
+            type: "doughnut",
+            data: {
+                labels: labelsMetodos,
+                datasets: [{
+                    data: datosMetodos
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: "bottom" }
+                }
+            }
+        });
+    </script>
+}

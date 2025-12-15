@@ -1,0 +1,315 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mateo\\source\\repos\\Reportes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\models\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\models\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\reportes.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\reportes.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\views\\reportes\\topproductos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\views\\reportes\\topproductos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\views\\reportes\\topclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\views\\reportes\\topclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\models\\viewmodels\\topclientesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\models\\viewmodels\\topclientesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\models\\viewmodels\\topproductosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\models\\viewmodels\\topproductosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\views\\reportes\\ventasmensuales.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\views\\reportes\\ventasmensuales.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\views\\reportes\\ventasdiarias.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\views\\reportes\\ventasdiarias.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\models\\viewmodels\\ventasdiariasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\models\\viewmodels\\ventasdiariasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\models\\viewmodels\\ventasmensualesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\models\\viewmodels\\ventasmensualesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\views\\reportes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\views\\reportes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\models\\detallespedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\models\\detallespedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|c:\\users\\mateo\\source\\repos\\reportes\\reportes\\models\\chocoadmindbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B69E437-5308-2389-F482-A682EA2E38B3}|Reportes\\Reportes.csproj|solutionrelative:reportes\\models\\chocoadmindbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TopClientesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\ViewModels\\TopClientesViewModel.cs",
+              "RelativeDocumentMoniker": "Reportes\\Models\\ViewModels\\TopClientesViewModel.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\ViewModels\\TopClientesViewModel.cs",
+              "RelativeToolTip": "Reportes\\Models\\ViewModels\\TopClientesViewModel.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:31:14.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TopClientes.cshtml",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Views\\Reportes\\TopClientes.cshtml",
+              "RelativeDocumentMoniker": "Reportes\\Views\\Reportes\\TopClientes.cshtml",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Views\\Reportes\\TopClientes.cshtml",
+              "RelativeToolTip": "Reportes\\Views\\Reportes\\TopClientes.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAmwIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T14:33:18.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\appsettings.json",
+              "RelativeDocumentMoniker": "Reportes\\appsettings.json",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\appsettings.json",
+              "RelativeToolTip": "Reportes\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAB+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-09T03:14:10.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Reportes.csproj",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Reportes.csproj",
+              "RelativeDocumentMoniker": "Reportes\\Reportes.csproj",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Reportes.csproj",
+              "RelativeToolTip": "Reportes\\Reportes.csproj",
+              "ViewState": "AgIAABIAAABg//////8gwBIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-09T02:51:04.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\ViewModels\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "Reportes\\Models\\ViewModels\\DashboardViewModel.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\ViewModels\\DashboardViewModel.cs",
+              "RelativeToolTip": "Reportes\\Models\\ViewModels\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T03:16:05.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TopProductosViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\ViewModels\\TopProductosViewModel.cs",
+              "RelativeDocumentMoniker": "Reportes\\Models\\ViewModels\\TopProductosViewModel.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\ViewModels\\TopProductosViewModel.cs",
+              "RelativeToolTip": "Reportes\\Models\\ViewModels\\TopProductosViewModel.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:30:51.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TopProductos.cshtml",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Views\\Reportes\\TopProductos.cshtml",
+              "RelativeDocumentMoniker": "Reportes\\Views\\Reportes\\TopProductos.cshtml",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Views\\Reportes\\TopProductos.cshtml",
+              "RelativeToolTip": "Reportes\\Views\\Reportes\\TopProductos.cshtml",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAIwH8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T14:32:56.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VentasMensuales.cshtml",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Views\\Reportes\\VentasMensuales.cshtml",
+              "RelativeDocumentMoniker": "Reportes\\Views\\Reportes\\VentasMensuales.cshtml",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Views\\Reportes\\VentasMensuales.cshtml",
+              "RelativeToolTip": "Reportes\\Views\\Reportes\\VentasMensuales.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T14:32:30.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VentasDiarias.cshtml",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Views\\Reportes\\VentasDiarias.cshtml",
+              "RelativeDocumentMoniker": "Reportes\\Views\\Reportes\\VentasDiarias.cshtml",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Views\\Reportes\\VentasDiarias.cshtml",
+              "RelativeToolTip": "Reportes\\Views\\Reportes\\VentasDiarias.cshtml",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAmwJAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T14:32:04.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VentasDiariasViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\ViewModels\\VentasDiariasViewModel.cs",
+              "RelativeDocumentMoniker": "Reportes\\Models\\ViewModels\\VentasDiariasViewModel.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\ViewModels\\VentasDiariasViewModel.cs",
+              "RelativeToolTip": "Reportes\\Models\\ViewModels\\VentasDiariasViewModel.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAywB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:29:27.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VentasMensualesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\ViewModels\\VentasMensualesViewModel.cs",
+              "RelativeDocumentMoniker": "Reportes\\Models\\ViewModels\\VentasMensualesViewModel.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\ViewModels\\VentasMensualesViewModel.cs",
+              "RelativeToolTip": "Reportes\\Models\\ViewModels\\VentasMensualesViewModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:29:51.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ReportesController.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Controllers\\ReportesController.cs",
+              "RelativeDocumentMoniker": "Reportes\\Controllers\\ReportesController.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Controllers\\ReportesController.cs",
+              "RelativeToolTip": "Reportes\\Controllers\\ReportesController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAgwEMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T03:17:25.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Views\\Reportes\\Index.cshtml",
+              "RelativeDocumentMoniker": "Reportes\\Views\\Reportes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Views\\Reportes\\Index.cshtml",
+              "RelativeToolTip": "Reportes\\Views\\Reportes\\Index.cshtml",
+              "ViewState": "AgIAALwAAAAAAAAAAAAkwM0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T03:18:42.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DetallesPedido.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\DetallesPedido.cs",
+              "RelativeDocumentMoniker": "Reportes\\Models\\DetallesPedido.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\DetallesPedido.cs",
+              "RelativeToolTip": "Reportes\\Models\\DetallesPedido.cs",
+              "ViewState": "AgIAABMAAACAmZmZmRkwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T03:17:56.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Program.cs",
+              "RelativeDocumentMoniker": "Reportes\\Program.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Program.cs",
+              "RelativeToolTip": "Reportes\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T03:13:55.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Reportes\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Reportes\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAHsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T03:30:51.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Reportes\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Reportes\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAADABAAAAAAAAAAAYwEIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-09T03:25:15.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ChocoAdminDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\ChocoAdminDbContext.cs",
+              "RelativeDocumentMoniker": "Reportes\\Models\\ChocoAdminDbContext.cs",
+              "ToolTip": "C:\\Users\\mateo\\source\\repos\\Reportes\\Reportes\\Models\\ChocoAdminDbContext.cs",
+              "RelativeToolTip": "Reportes\\Models\\ChocoAdminDbContext.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAACEAAACRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T03:14:17.62Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
