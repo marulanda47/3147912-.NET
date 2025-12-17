@@ -1,0 +1,187 @@
+﻿@model techNova.Models.Cliente
+
+@{
+    ViewData["Title"] = "Nuevo Cliente";
+}
+
+<div class="mb-6 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-2xl bg-neutral-900 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="h-5 w-5 text-neutral-50"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M6 20c0-3.314 2.239-6 5-6h2c2.761 0 5 2.686 5 6" />
+            </svg>
+        </div>
+        <div>
+            <h1 class="text-2xl md:text-3xl font-semibold text-neutral-900">Nuevo cliente</h1>
+            <p class="text-xs text-neutral-500 mt-0.5">
+                Registra la información básica de un cliente para comenzar a operar con él.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white shadow-sm border border-neutral-200 rounded-2xl p-6 md:p-8">
+    <form asp-action="Create" class="space-y-6">
+
+        <div asp-validation-summary="ModelOnly"
+             class="text-sm text-rose-700 bg-rose-50 border border-rose-100 rounded-xl px-4 py-3 mb-2">
+        </div>
+
+        <div class="space-y-5">
+            <div class="border-b border-neutral-100 pb-3 mb-2">
+                <h2 class="text-sm font-semibold text-neutral-800">Información del cliente</h2>
+                <p class="text-xs text-neutral-500 mt-0.5">
+                    Estos datos serán visibles en todo el módulo de ventas y reportes.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Nombre -->
+                <div class="space-y-1.5">
+                    <label asp-for="NombreCompleto" class="text-xs font-semibold tracking-wide text-neutral-700 uppercase"></label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="h-4 w-4 text-neutral-400"
+                                 viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="2"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="4" />
+                                <path d="M6 20c0-3.314 2.239-6 5-6h2c2.761 0 5 2.686 5 6" />
+                            </svg>
+                        </span>
+                        <input asp-for="NombreCompleto"
+                               class="w-full pl-9 pr-3 py-2 rounded-xl border border-neutral-200 bg-neutral-50 text-sm
+                                      focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900" />
+                    </div>
+                    <span asp-validation-for="NombreCompleto" class="text-xs text-rose-600"></span>
+                </div>
+
+                <!-- Correo -->
+                <div class="space-y-1.5">
+                    <label asp-for="Correo" class="text-xs font-semibold tracking-wide text-neutral-700 uppercase"></label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="h-4 w-4 text-neutral-400"
+                                 viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="2"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path d="M4 4h16v16H4z" />
+                                <polyline points="4,4 12,12 20,4" />
+                            </svg>
+                        </span>
+                        <input asp-for="Correo"
+                               class="w-full pl-9 pr-3 py-2 rounded-xl border border-neutral-200 bg-neutral-50 text-sm
+                                      focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900"
+                               type="email" />
+                    </div>
+                    <span asp-validation-for="Correo" class="text-xs text-rose-600"></span>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="space-y-1.5">
+                    <label asp-for="Telefono" class="text-xs font-semibold tracking-wide text-neutral-700 uppercase"></label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="h-4 w-4 text-neutral-400"
+                                 viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="2"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path d="M22 16.92V21a1 1 0 0 1-1.09 1 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3 3.09 1 1 0 0 1 4 2h4.09A1 1 0 0 1 9.1 2.78l1.2 2.8a1 1 0 0 1-.27 1.16L8.7 8.3a16 16 0 0 0 6 6l1.56-1.33a1 1 0 0 1 1.16-.27l2.8 1.2a1 1 0 0 1 .7.92z" />
+                            </svg>
+                        </span>
+                        <input asp-for="Telefono"
+                               class="w-full pl-9 pr-3 py-2 rounded-xl border border-neutral-200 bg-neutral-50 text-sm
+                                      focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900" />
+                    </div>
+                    <span asp-validation-for="Telefono" class="text-xs text-rose-600"></span>
+                </div>
+
+                <!-- Dirección -->
+                <div class="space-y-1.5">
+                    <label asp-for="Direccion" class="text-xs font-semibold tracking-wide text-neutral-700 uppercase"></label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 class="h-4 w-4 text-neutral-400"
+                                 viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="2"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path d="M12 21s-6-4.35-6-10a6 6 0 0 1 12 0c0 5.65-6 10-6 10z" />
+                                <circle cx="12" cy="11" r="2.5" />
+                            </svg>
+                        </span>
+                        <input asp-for="Direccion"
+                               class="w-full pl-9 pr-3 py-2 rounded-xl border border-neutral-200 bg-neutral-50 text-sm
+                                      focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900" />
+                    </div>
+                    <span asp-validation-for="Direccion" class="text-xs text-rose-600"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones -->
+        <div class="flex justify-end gap-3 pt-2">
+            <a asp-action="Index"
+               class="inline-flex items-center px-4 py-2 rounded-xl border border-neutral-300 text-neutral-800 text-sm
+                      bg-white hover:bg-neutral-100 transition">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-4 w-4 mr-1.5"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
+                Cancelar
+            </a>
+
+            <button type="submit"
+                    class="inline-flex items-center px-6 py-2 rounded-xl bg-neutral-900 text-neutral-50 text-sm font-medium
+                           shadow-sm hover:bg-neutral-800 transition">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-4 w-4 mr-1.5"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <path d="M12 5v14" />
+                    <path d="M5 12h14" />
+                </svg>
+                Guardar cliente
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

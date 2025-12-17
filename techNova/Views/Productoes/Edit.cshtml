@@ -1,0 +1,133 @@
+﻿@model techNova.Models.Producto
+
+@{
+    ViewData["Title"] = "Editar Producto";
+}
+
+<div class="mb-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-2xl bg-neutral-900 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="h-5 w-5 text-neutral-50"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
+            </svg>
+        </div>
+
+        <div>
+            <h1 class="text-2xl md:text-3xl font-semibold text-neutral-900">Editar producto</h1>
+            <p class="text-xs text-neutral-500 mt-0.5">
+                Modifica la información del producto seleccionado.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white shadow-sm border border-neutral-200 rounded-2xl p-6 md:p-8">
+    <form asp-action="Edit" class="space-y-6">
+        <input type="hidden" asp-for="Id" />
+
+        <div asp-validation-summary="ModelOnly"
+             class="text-sm text-rose-700 bg-rose-50 border border-rose-100 rounded-xl px-4 py-3 mb-2">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- Código -->
+            <div class="space-y-1.5">
+                <label asp-for="Codigo" class="text-xs font-semibold tracking-wide text-neutral-700 uppercase"></label>
+                <input asp-for="Codigo"
+                       class="w-full px-3 py-2 rounded-xl border border-neutral-200 bg-neutral-50 text-sm
+                              focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900" />
+                <span asp-validation-for="Codigo" class="text-xs text-rose-600"></span>
+            </div>
+
+            <!-- Nombre -->
+            <div class="space-y-1.5">
+                <label asp-for="Nombre" class="text-xs font-semibold tracking-wide text-neutral-700 uppercase"></label>
+                <input asp-for="Nombre"
+                       class="w-full px-3 py-2 rounded-xl border border-neutral-200 bg-neutral-50 text-sm
+                              focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900" />
+                <span asp-validation-for="Nombre" class="text-xs text-rose-600"></span>
+            </div>
+
+            <!-- Precio -->
+            <div class="space-y-1.5">
+                <label asp-for="PrecioUnitario" class="text-xs font-semibold tracking-wide text-neutral-700 uppercase"></label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-3 flex items-center text-neutral-400 text-xs">$</span>
+                    <input asp-for="PrecioUnitario"
+                           class="w-full pl-7 pr-3 py-2 rounded-xl border border-neutral-200 bg-neutral-50 text-sm
+                                  focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900" />
+                </div>
+                <span asp-validation-for="PrecioUnitario" class="text-xs text-rose-600"></span>
+            </div>
+
+            <!-- Stock -->
+            <div class="space-y-1.5">
+                <label asp-for="Stock" class="text-xs font-semibold tracking-wide text-neutral-700 uppercase"></label>
+                <input asp-for="Stock"
+                       class="w-full px-3 py-2 rounded-xl border border-neutral-200 bg-neutral-50 text-sm
+                              focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900" />
+                <span asp-validation-for="Stock" class="text-xs text-rose-600"></span>
+            </div>
+        </div>
+
+        <!-- Descripción -->
+        <div class="space-y-1.5">
+            <label asp-for="Descripcion" class="text-xs font-semibold tracking-wide text-neutral-700 uppercase"></label>
+            <textarea asp-for="Descripcion" rows="3"
+                      class="w-full px-3 py-2 rounded-xl border border-neutral-200 bg-neutral-50 text-sm
+                             focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900"></textarea>
+            <span asp-validation-for="Descripcion" class="text-xs text-rose-600"></span>
+        </div>
+
+        <!-- Botones -->
+        <div class="flex justify-end gap-3 pt-4">
+            <a asp-action="Index"
+               class="inline-flex items-center px-4 py-2 rounded-xl border border-neutral-300 text-neutral-800 text-sm
+                      bg-white hover:bg-neutral-100 transition">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-4 w-4 mr-1.5"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
+                Cancelar
+            </a>
+
+            <button type="submit"
+                    class="inline-flex items-center px-6 py-2 rounded-xl bg-neutral-900 text-neutral-50 text-sm font-medium
+                           shadow-sm hover:bg-neutral-800 transition">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-4 w-4 mr-1.5"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <path d="M12 5v14" />
+                    <path d="M5 12h14" />
+                </svg>
+                Guardar cambios
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

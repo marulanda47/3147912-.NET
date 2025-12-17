@@ -1,0 +1,85 @@
+﻿@model techNova.Models.Venta
+
+@{
+    ViewData["Title"] = "Detalles de Venta";
+}
+
+<div class="mb-6 flex items-center gap-3">
+    <div class="h-10 w-10 rounded-2xl bg-neutral-900 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="h-5 w-5 text-neutral-50"
+             viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3h18l-1.5 9h-15z" />
+            <circle cx="8.5" cy="19.5" r="1.5" />
+            <circle cx="17.5" cy="19.5" r="1.5" />
+        </svg>
+    </div>
+    <div>
+        <h1 class="text-2xl md:text-3xl font-semibold text-neutral-900">Detalles de la venta</h1>
+        <p class="text-xs text-neutral-500 mt-0.5">
+            Resumen de la transacción realizada.
+        </p>
+    </div>
+</div>
+
+<div class="bg-white shadow-sm border border-neutral-200 rounded-2xl p-6 md:p-8 space-y-6">
+
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm">
+        <div class="space-y-1">
+            <p class="text-neutral-500 text-xs uppercase tracking-wide">Cliente</p>
+            <p class="text-lg font-semibold text-neutral-900">@Model.Cliente.NombreCompleto</p>
+        </div>
+
+        <div class="space-y-1">
+            <p class="text-neutral-500 text-xs uppercase tracking-wide">Fecha</p>
+            <p class="font-medium text-neutral-800">@Model.Fecha</p>
+        </div>
+
+        <div class="space-y-1">
+            <p class="text-neutral-500 text-xs uppercase tracking-wide">Total</p>
+            <p class="text-xl font-bold text-neutral-900">$@Model.Total</p>
+        </div>
+    </div>
+
+    <div class="overflow-hidden border border-neutral-200 rounded-2xl">
+        <table class="min-w-full text-sm">
+            <thead class="bg-neutral-900 text-xs font-medium text-neutral-200 uppercase tracking-wide">
+                <tr>
+                    <th class="px-4 py-3 text-left">Producto</th>
+                    <th class="px-4 py-3 text-left">Precio</th>
+                    <th class="px-4 py-3 text-left">Cantidad</th>
+                    <th class="px-4 py-3 text-left">Subtotal</th>
+                </tr>
+            </thead>
+
+            <tbody class="divide-y divide-neutral-100">
+                @foreach (var d in Model.DetallesVenta)
+                {
+                    <tr class="hover:bg-neutral-50 transition">
+                        <td class="px-4 py-3 text-neutral-800">@d.Producto.Nombre</td>
+                        <td class="px-4 py-3 text-neutral-800">$@d.PrecioUnitario</td>
+                        <td class="px-4 py-3 text-neutral-800">@d.Cantidad</td>
+                        <td class="px-4 py-3 font-semibold text-neutral-900">$@d.Subtotal</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="flex justify-end pt-4">
+        <a asp-action="Index"
+           class="inline-flex items-center px-4 py-2 rounded-xl border border-neutral-300 text-neutral-800 text-sm
+                  bg-white hover:bg-neutral-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="h-4 w-4 mr-1.5" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+            </svg>
+            Volver
+        </a>
+    </div>
+
+</div>

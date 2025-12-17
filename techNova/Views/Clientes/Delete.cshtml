@@ -1,0 +1,100 @@
+﻿@model techNova.Models.Cliente
+
+@{
+    ViewData["Title"] = "Eliminar Cliente";
+}
+
+<div class="mb-6 flex items-center gap-3">
+    <div class="h-10 w-10 rounded-2xl bg-rose-100 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="h-5 w-5 text-rose-600"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+            <path d="M3 6h18" />
+            <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+            <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+            <line x1="10" y1="11" x2="10" y2="17" />
+            <line x1="14" y1="11" x2="14" y2="17" />
+        </svg>
+    </div>
+    <div>
+        <h1 class="text-2xl md:text-3xl font-semibold text-rose-700">Eliminar cliente</h1>
+        <p class="text-xs text-neutral-500 mt-0.5">
+            Esta acción es irreversible. El cliente se eliminará del sistema.
+        </p>
+    </div>
+</div>
+
+<div class="bg-white shadow-sm border border-rose-100 rounded-2xl p-6 md:p-8 space-y-5">
+    <div class="bg-rose-50 border border-rose-100 rounded-xl px-4 py-3 text-xs text-rose-700">
+        <div class="flex items-start gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="h-4 w-4 mt-0.5"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="13" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+            <p>
+                Confirma que entiendes que no podrás recuperar la información de este cliente una vez eliminado.
+            </p>
+        </div>
+    </div>
+
+    <div class="space-y-1">
+        <p class="text-base font-semibold text-neutral-900">@Model.NombreCompleto</p>
+        <p class="text-sm text-neutral-600">
+            Correo: <span class="font-medium">@Model.Correo</span> ·
+            Teléfono: <span class="font-medium">@Model.Telefono</span>
+        </p>
+    </div>
+
+    <form asp-action="Delete" class="pt-4">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="flex justify-end gap-3">
+            <a asp-action="Index"
+               class="inline-flex items-center px-4 py-2 rounded-xl border border-neutral-300 text-neutral-800 text-sm
+                      bg-white hover:bg-neutral-100 transition">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-4 w-4 mr-1.5"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
+                Cancelar
+            </a>
+
+            <button type="submit"
+                    class="inline-flex items-center px-6 py-2 rounded-xl bg-rose-600 text-white text-sm font-medium
+                           shadow-sm hover:bg-rose-700 transition">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-4 w-4 mr-1.5"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <path d="M3 6h18" />
+                    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                    <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+                </svg>
+                Eliminar cliente
+            </button>
+        </div>
+    </form>
+</div>
